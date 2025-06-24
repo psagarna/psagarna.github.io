@@ -46,14 +46,6 @@ layout: default
 
 
 </div>
-<!-- <div class="container" markdown="block">
-# News
-
-{% for update in site.data.updates %}
-- **{{update.date}}**: {{update.msg}}
-{%- if update.link %} [🔗 Link]({{update.link}}){%endif%}
-{%endfor%}
-</div> -->
 
 <br/>
 
