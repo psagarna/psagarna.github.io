@@ -1,46 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Pablo D. Sagarna</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 20px; line-height: 1.6; }
-    img { border-radius: 100px; width: 150px; }
-    h1, h2 { color: #333; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
+---
+layout: default
+---
 
-  <img src="foto.jpeg" alt="Tu Foto" />
-  <h1>Pablo D. Sagarna</h1>
-  <p><strong>Tu Cargo o Título</strong><br>
-  Universidad o Institución<br>
-  <a href="mailto:psagarna@gmail.com">psagarna@gmail.com</a></p>
+<div id='jumbotron' class="jumbotron">
+		<div class='container'>
+	      <div class="media">
+	      <img id="profile-picture" class="media-object pull-left"  src="foto.jpeg"/>
+	      <div class="media-body"><h1 class="">Pablo D. Sagarna</h1>
+<span id="social-links">
+			  <a class="" target='_blank' role="button" href="https://www.linkedin.com/in/psagarna">
+				   LinkedIn</a> |
+		      <a class="" target='_blank' role="button" href="http://github.com/psagarna">
+				   Github</a> |
+		      <a class="" target='_blank' role="button" href="https://scholar.google.com/citations?user=-614R54AAAAJ&hl=es">
+				   Google Scholar</a> |
+        <br/>
+        <br/>
+        <small>
+          <a role="button" href="mailto:psagarna@gmail.com"> <strong>E-mail:</strong> psagarna@gmail.com</a>
+        <br/><strong>Interests:</strong> Green AI, Green Software, AI Engineering
+        </small>
+	        </div>
+	      </div>
+		</div>
+    </div>
 
-  <p>
-    <a href="https://github.com/psagarna">GitHub</a> |
-    <a href="https://www.linkedin.com/in/psagarna/">LinkedIn</a> |
-    <a href="cv/CVPabloSagarna-EN.pdf">CV EN</a>
-    <a href="cv/CVPabloSagarna-ES.pdf">CV ES</a>
-  </p>
+{% include menu.md %}
 
-  <h2>Investigación</h2>
-  <p>Describe brevemente tu área de investigación o intereses.</p>
+<div class="container" >
+      <div class="list-group">
+        <a href="https://tqrg.github.io/energy-patterns/" target="_blank" class="list-group-item ">
+          <span class="badge">Medium</span>
+                <h4 class="list-group-item-heading"><ion-icon name="leaf-outline"></ion-icon>Articles</h4>
+                <small class="list-group-item-text">Ejemplo</small>
+        </a>
+        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank" class="list-group-item list-group-item-success">
+          <span class="badge">PDF</span>
+                <h4 class="list-group-item-heading">Download Curriculum Vitae English</h4>
+                <small class="list-group-item-text">Updated on June, 2025.</small>
+        </a>
+        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank" class="list-group-item list-group-item-success">
+          <span class="badge">PDF</span>
+                <h4 class="list-group-item-heading">Download Curriculum Vitae Spanish</h4>
+                <small class="list-group-item-text">Updated on June, 2025.</small>
+        </a>
+      </div>
 
-  <h2>Publicaciones</h2>
-  <ul>
-    <li><strong>Nombre del Artículo</strong>, con Autor1, Autor2. <em>Revista</em>, Año. <a href="#">[PDF]</a></li>
-    <li>Otra publicación...</li>
-  </ul>
 
-  <h2>Docencia</h2>
-  <ul>
-    <li>Curso 1 – Universidad X</li>
-    <li>Curso 2 – Universidad Y</li>
-  </ul>
+</div>
+<!-- <div class="container" markdown="block">
+# News
 
-</body>
-</html>
+{% for update in site.data.updates %}
+- **{{update.date}}**: {{update.msg}}
+{%- if update.link %} [🔗 Link]({{update.link}}){%endif%}
+{%endfor%}
+</div> -->
+
+<br/>
+
+<!-- jQuery (necessary for Bootstrap) -->
+<script   src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="   crossorigin="anonymous"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
