@@ -18,7 +18,7 @@
   <h1>Pablo D. Sagarna</h1>
   <p><strong>Tu Cargo o Título</strong><br>
   Universidad o Institución<br>
-  <a href="mailto:psagarna@gmail.com">tuemail@dominio.com</a></p>
+  <a href="mailto:psagarna@gmail.com">psagarna@gmail.com</a></p>
 
   <p>
     <a href="https://github.com/psagarna">GitHub</a> |
