@@ -25,8 +25,6 @@ layout: default
 		</div>
     </div>
 
-{% include menu.md %}
-
 <div class="container" >
       <div class="list-group">
         <a href="https://tqrg.github.io/energy-patterns/" target="_blank" class="list-group-item ">
