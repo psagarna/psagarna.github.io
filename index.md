@@ -1,8 +1,3 @@
----
-layout: default
----
-
-
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -110,10 +105,10 @@ layout: default
 
     <section>
       <h2>Investigación</h2>
-      <--p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p-->
+      <!--p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p-->
     </section>
 
-    <--section>
+    <!--section>
       <h2>Publicaciones</h2>
       <ul>
         <li><strong>Título de publicación</strong>, con Autor1 y Autor2. <em>Revista</em>, Año. <a href="#">[PDF]</a></li>
