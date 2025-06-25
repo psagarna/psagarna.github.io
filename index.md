@@ -1,58 +1,130 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pablo Sagarna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #007acc;
+      --text-color: #333;
+      --bg-color: #fdfdfd;
+    }
 
-<div id='jumbotron' class="jumbotron">
-		<div class='container'>
-	      <div class="media">
-	      <img id="profile-picture" class="media-object pull-left"  src="foto.jpeg"/>
-	      <div class="media-body"><h1 class="">Pablo D. Sagarna</h1>
-<span id="social-links">
-			  <a class="" target='_blank' role="button" href="https://www.linkedin.com/in/psagarna">
-				   LinkedIn</a> |
-		      <a class="" target='_blank' role="button" href="http://github.com/psagarna">
-				   Github</a> |
-		      <a class="" target='_blank' role="button" href="https://scholar.google.com/citations?user=-614R54AAAAJ&hl=es">
-				   Google Scholar</a> |
-        <br/>
-        <br/>
-        <small>
-          <a role="button" href="mailto:psagarna@gmail.com"> <strong>E-mail:</strong> psagarna@gmail.com</a>
-        <br/><strong>Interests:</strong> Green AI, Green Software, AI Engineering
-        </small>
-	        </div>
-	      </div>
-		</div>
-    </div>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-<div class="container" >
-      <div class="list-group">
-        <a href="https://tqrg.github.io/energy-patterns/" target="_blank" class="list-group-item ">
-          <span class="badge">Medium</span>
-                <h4 class="list-group-item-heading"><ion-icon name="leaf-outline"></ion-icon>Articles</h4>
-                <small class="list-group-item-text">Ejemplo</small>
-        </a>
-        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank" class="list-group-item list-group-item-success">
-          <span class="badge">PDF</span>
-                <h4 class="list-group-item-heading">Download Curriculum Vitae English</h4>
-                <small class="list-group-item-text">Updated on June, 2025.</small>
-        </a>
-        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank" class="list-group-item list-group-item-success">
-          <span class="badge">PDF</span>
-                <h4 class="list-group-item-heading">Download Curriculum Vitae Spanish</h4>
-                <small class="list-group-item-text">Updated on June, 2025.</small>
-        </a>
-      </div>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-</div>
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
 
-<br/>
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
 
-<!-- jQuery (necessary for Bootstrap) -->
-<script   src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="   crossorigin="anonymous"></script>
+    p.subtitle {
+      font-size: 1.1em;
+      color: #666;
+    }
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="foto.jpeg" alt="Tu Foto">
+      <h1>Tu Nombre</h1>
+      <p class="subtitle">Tu cargo o especialización<br>Universidad o Institución</p>
+      <nav>
+        <a href="mailto:psagarna@gmail.com">Email</a> |
+        <a href="https://github.com/psagarna" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a> |
+        <a href="CVPabloSagarna-EN.pdf" target="_blank">CV ENG</a>
+        <a href="CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Investigación</h2>
+      <p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p>
+    </section>
+
+    <section>
+      <h2>Publicaciones</h2>
+      <ul>
+        <li><strong>Título de publicación</strong>, con Autor1 y Autor2. <em>Revista</em>, Año. <a href="#">[PDF]</a></li>
+        <li><strong>Otra publicación</strong>, con otros autores. <em>Conferencia</em>, Año.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Docencia</h2>
+      <ul>
+        <li>Curso 1 – Universidad X, Semestre 2024</li>
+        <li>Curso 2 – Universidad Y, Semestre 2023</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
