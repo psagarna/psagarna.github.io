@@ -98,7 +98,7 @@ layout: default
     <header>
       <img src="foto.jpeg" alt="Tu Foto">
       <h1>Pablo Sagarna</h1>
-      <p class="subtitle">Tu cargo o especialización<br>Universidad o Institución</p>
+      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2/Universidad Politécnica de Madrid</p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a> |
         <a href="https://github.com/psagarna" target="_blank">GitHub</a> |
@@ -110,10 +110,10 @@ layout: default
 
     <section>
       <h2>Investigación</h2>
-      <p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p>
+      <--p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p-->
     </section>
 
-    <section>
+    <--section>
       <h2>Publicaciones</h2>
       <ul>
         <li><strong>Título de publicación</strong>, con Autor1 y Autor2. <em>Revista</em>, Año. <a href="#">[PDF]</a></li>
@@ -127,7 +127,7 @@ layout: default
         <li>Curso 1 – Universidad X, Semestre 2024</li>
         <li>Curso 2 – Universidad Y, Semestre 2023</li>
       </ul>
-    </section>
+    </section-->
   </div>
 </body>
 </html>
