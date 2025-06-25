@@ -98,8 +98,8 @@
         <a href="mailto:psagarna@gmail.com">Email</a> |
         <a href="https://github.com/psagarna" target="_blank">GitHub</a> |
         <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a> |
-        <a href="CVPabloSagarna-EN.pdf" target="_blank">CV ENG</a>
-        <a href="CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
+        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank">CV ENG</a>
+        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
       </nav>
     </header>
 
