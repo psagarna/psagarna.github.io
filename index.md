@@ -92,7 +92,7 @@
   <div class="container">
     <header>
       <img src="foto.jpeg" alt="Tu Foto">
-      <h1>Tu Nombre</h1>
+      <h1>Pablo Sagarna</h1>
       <p class="subtitle">Tu cargo o especialización<br>Universidad o Institución</p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a> |
