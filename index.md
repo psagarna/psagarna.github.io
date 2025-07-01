@@ -103,10 +103,10 @@
       </nav>
     </header>
 
-    <section>
+    <!--section>
       <h2>Investigación</h2>
       <!--p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p-->
-    </section>
+    </section-->
 
     <!--section>
       <h2>Publicaciones</h2>
