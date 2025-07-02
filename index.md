@@ -106,17 +106,16 @@
     <!--section>
       <h2>Investigación</h2>
       <p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p>
-    </section>
+    </section-->
 
     <section>
       <h2>Publicaciones</h2>
       <ul>
-        <li><strong>Título de publicación</strong>, con Autor1 y Autor2. <em>Revista</em>, Año. <a href="#">[PDF]</a></li>
-        <li><strong>Otra publicación</strong>, con otros autores. <em>Conferencia</em>, Año.</li>
+        <li><strong>¿Como agregar un evento ante un cambio de estado de una API en su ciclo de vida?</strong>Pablo Sagarna<em>Medium</em>, 2025. <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef"></a></li>
       </ul>
     </section>
 
-    <section>
+    <!--section>
       <h2>Docencia</h2>
       <ul>
         <li>Curso 1 – Universidad X, Semestre 2024</li>
