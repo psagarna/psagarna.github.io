@@ -111,7 +111,7 @@
     <section>
       <h2>Publicaciones</h2>
       <ul>
-        <li><strong>¿Como agregar un evento ante un cambio de estado de una API en su ciclo de vida?</strong>Pablo Sagarna<em>Medium</em>, 2025. <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef"></a></li>
+        <li><strong>¿Como agregar un evento ante un cambio de estado de una API en su ciclo de vida? - 2025 <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef">Articulo</a></li>
       </ul>
     </section>
 
