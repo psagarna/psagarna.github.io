@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pablo Sagarna - Director de Arquitectura / Investigador</title>
   <style>
     :root {
       --primary: #007acc;
@@ -19,7 +20,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
     }
@@ -35,6 +36,7 @@
       height: 150px;
       object-fit: cover;
       margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     h1 {
@@ -48,13 +50,22 @@
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
     nav a {
-      margin: 0 10px;
       text-decoration: none;
       color: var(--primary);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #005999;
     }
 
     section {
@@ -66,24 +77,50 @@
       padding-bottom: 5px;
       margin-bottom: 15px;
       color: var(--primary);
+      font-size: 1.5em;
     }
 
     ul {
       padding-left: 20px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      p.subtitle {
+        font-size: 1em;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       header img {
         width: 100px;
         height: 100px;
       }
 
       h1 {
-        font-size: 1.5em;
+        font-size: 1.4em;
+      }
+
+      h2 {
+        font-size: 1.2em;
       }
     }
   </style>
@@ -91,37 +128,28 @@
 <body>
   <div class="container">
     <header>
-      <img src="foto.jpeg" alt="Tu Foto">
+      <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
-      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2/Universidad Politécnica de Madrid</p>
+      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
       <nav>
-        <a href="mailto:psagarna@gmail.com">Email</a> |
-        <a href="https://github.com/psagarna" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a> |
-        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank">CV ENG</a>
-        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
+        <a href="mailto:psagarna@gmail.com">Email</a>
+        <a href="https://github.com/psagarna" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a>
+        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank">CV (Inglés)</a>
+        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV (Español)</a>
       </nav>
     </header>
-
-    <!--section>
-      <h2>Investigación</h2>
-      <p>Aquí puedes incluir una descripción breve de tus intereses de investigación, proyectos actuales o temas que te apasionan.</p>
-    </section-->
 
     <section>
       <h2>Publicaciones</h2>
       <ul>
-        <li><strong>¿Como agregar un evento ante un cambio de estado de una API en su ciclo de vida? - 2025 <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef">Articulo</a></li>
+        <li>
+          <strong>Sagarna, P.</strong> (2025). 
+          ¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida? 
+          <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef" target="_blank">Artículo en Medium</a>.
+        </li>
       </ul>
     </section>
-
-    <!--section>
-      <h2>Docencia</h2>
-      <ul>
-        <li>Curso 1 – Universidad X, Semestre 2024</li>
-        <li>Curso 2 – Universidad Y, Semestre 2023</li>
-      </ul>
-    </section-->
   </div>
 </body>
 </html>
