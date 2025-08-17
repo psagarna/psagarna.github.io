@@ -57,7 +57,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 15px; /* separación entre enlaces */
     }
 
     nav a {
@@ -87,7 +87,7 @@
       padding-left: 20px;
     }
 
-    /* Responsive */
+    /* Responsive ajustes menores */
     @media (max-width: 768px) {
       .container {
         padding: 20px 10px;
@@ -96,7 +96,6 @@
 
       header img {
         width: 120px;
-        height: auto;
       }
 
       h1 {
@@ -108,20 +107,17 @@
       }
 
       nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        gap: 10px;
       }
 
       nav a {
-        font-size: 1em;
+        font-size: 0.95em;
       }
     }
 
     @media (max-width: 480px) {
       header img {
         width: 100px;
-        height: auto;
       }
 
       h1 {
@@ -143,7 +139,7 @@
     <header>
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
-      <p class="subtitle">Director de Arquitectura / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
+      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
