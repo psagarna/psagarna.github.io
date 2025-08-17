@@ -143,7 +143,7 @@
     <header>
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
-      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
+      <p class="subtitle">Director de Arquitectura / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
