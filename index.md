@@ -34,6 +34,8 @@
       border-radius: 50%;
       width: 150px;
       height: 150px;
+      max-width: 100%;
+      height: auto;
       object-fit: cover;
       margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -42,6 +44,7 @@
     h1 {
       font-size: 2em;
       margin-bottom: 5px;
+      word-wrap: break-word;
     }
 
     p.subtitle {
@@ -87,12 +90,13 @@
     /* Responsive */
     @media (max-width: 768px) {
       .container {
-        padding: 20px 15px;
+        padding: 20px 10px;
+        max-width: 100%;
       }
 
       header img {
         width: 120px;
-        height: 120px;
+        height: auto;
       }
 
       h1 {
@@ -105,14 +109,19 @@
 
       nav {
         flex-direction: column;
+        align-items: center;
         gap: 8px;
+      }
+
+      nav a {
+        font-size: 1em;
       }
     }
 
     @media (max-width: 480px) {
       header img {
         width: 100px;
-        height: 100px;
+        height: auto;
       }
 
       h1 {
@@ -121,6 +130,10 @@
 
       h2 {
         font-size: 1.2em;
+      }
+
+      body {
+        font-size: 0.95em;
       }
     }
   </style>
