@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pablo Sagarna - Director de Arquitectura / Investigador</title>
+  <title>Pablo Sagarna - Director of Arquitecture / Researcher</title>
   <style>
     :root {
       --primary: #007acc;
@@ -145,7 +145,7 @@
     <header>
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
-      <p class="subtitle">Director de Arquitectura de Solución / Investigador<br>WSO2 / Universidad Politécnica de Madrid</p>
+      <p class="subtitle">Director of Architecture @WSO2 <br> Phd Candidate @Politécnica de Madrid</p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
