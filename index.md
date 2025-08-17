@@ -55,15 +55,21 @@
     nav {
       margin-top: 15px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px; /* separación entre enlaces */
+      flex-wrap: wrap;
+      font-size: 0.95em;
     }
 
     nav a {
       text-decoration: none;
       color: var(--primary);
       font-weight: 500;
+      padding: 0 6px;
+      border-right: 1px solid #ccc;
+    }
+
+    nav a:last-child {
+      border-right: none; /* Elimina el último separador */
     }
 
     nav a:hover {
@@ -87,7 +93,7 @@
       padding-left: 20px;
     }
 
-    /* Responsive ajustes menores */
+    /* Responsive ajustes */
     @media (max-width: 768px) {
       .container {
         padding: 20px 10px;
@@ -107,11 +113,7 @@
       }
 
       nav {
-        gap: 10px;
-      }
-
-      nav a {
-        font-size: 0.95em;
+        font-size: 0.9em;
       }
     }
 
@@ -130,6 +132,10 @@
 
       body {
         font-size: 0.95em;
+      }
+
+      nav {
+        font-size: 0.85em;
       }
     }
   </style>
