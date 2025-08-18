@@ -156,7 +156,7 @@
     </header>
 
     <section>
-      <h2>Publicaciones</h2>
+      <h2>Publications and Inventions</h2>
       <ul>
         <li>
           <strong>Sagarna, P.</strong> (2025). 
