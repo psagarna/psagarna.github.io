@@ -160,8 +160,7 @@
       <ul>
         <li>
           <strong>Sagarna, P.</strong> (2025). 
-          ¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida? 
-          <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef" target="_blank">Artículo en Medium</a>.
+          <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef" target="_blank">¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida?</a>.
         </li>
       </ul>
     </section>
