@@ -2,9 +2,11 @@ In 1996, I developed my first piece of software entirely on my own, without any 
 
 This experience gave me the opportunity to create my first real project for my father, who was an accountant: a program called “Payroll Software for Processing Salaries and Wages”, built in VBA using Excel macros.
 
-This project became the key motivation that later inspired me to study Software Engineering.
+This project became the key motivation that later inspired me to study Software Engineering. 
 
-Some screen shots
+Some screen shots:
+
+
 <img width="637" height="372" alt="image" src="https://github.com/user-attachments/assets/1564f221-dcc7-4a7a-ab8b-b09bd1d4fb5d" />
 
 <img width="589" height="308" alt="image" src="https://github.com/user-attachments/assets/136a23ff-fc0a-4a35-ac9e-8ed17de1092e" />
