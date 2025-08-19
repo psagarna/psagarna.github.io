@@ -90,7 +90,7 @@
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 8px;
     }
 
     /* Responsive ajustes */
