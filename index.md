@@ -90,7 +90,8 @@
     }
 
     ul {
-      padding-left: 8px;
+      margin-left: -19px; /* Ajusta el valor según lo necesites */
+      padding-left: 20px; /* Opcional, controla el espacio antes del contenido de la lista */
     }
 
     /* Responsive ajustes */
