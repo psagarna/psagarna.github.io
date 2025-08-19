@@ -6,17 +6,17 @@ This was my invention with which I graduated as an engineer: WEFIM! A web-based 
 
 Some key features of WEFIM included:
 
-User session management: Each user had a username and password to access the system.
+*User session management: Each user had a username and password to access the system.
 
-Efficient file organization: Users could perform basic operations such as temporarily deleting files (recycle bin), sharing files with others (generating new versions), downloading files to a local machine for editing, and searching for specific files within the system.
+*Efficient file organization: Users could perform basic operations such as temporarily deleting files (recycle bin), sharing files with others (generating new versions), downloading files to a local machine for editing, and searching for specific files within the system.
 
-User discovery: Each user could maintain a personal homepage with relevant information to share. This allowed users to find and communicate with others through an internal messaging system.
+*User discovery: Each user could maintain a personal homepage with relevant information to share. This allowed users to find and communicate with others through an internal messaging system.
 
-Information security: User sessions were managed to ensure the safety and privacy of all data.
+*Information security: User sessions were managed to ensure the safety and privacy of all data.
 
-Customizable workspace: Users could configure their interface according to their preferences.
+*Customizable workspace: Users could configure their interface according to their preferences.
 
-File transfer via email: Users could send files to others outside the system directly via email.
+*File transfer via email: Users could send files to others outside the system directly via email.
 
 With these features, WEFIM users no longer needed to carry stacks of CDs or a heavy laptop with important information.
 
