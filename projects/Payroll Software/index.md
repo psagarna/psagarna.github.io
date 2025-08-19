@@ -4,7 +4,7 @@ This experience gave me the opportunity to create my first real project for my f
 
 This project became the key motivation that later inspired me to study Software Engineering. 
 
-Some screen shots:
+Some screenshots:
 
 
 <img width="637" height="372" alt="image" src="https://github.com/user-attachments/assets/1564f221-dcc7-4a7a-ab8b-b09bd1d4fb5d" />
