@@ -1,30 +1,27 @@
-WEFIM (WEB FILE MANAGER) - 3 de noviembre de 2003
+WEFIM (WEB FILE MANAGER) - November 3,2003
 
-Hoy en dia podemos hablar de "nube", "SaaS", "Cloud computing", "Red Social" y comprendemos perfectmanete de lo que se trata, pero hace 22 años era bastante dificil explicarlo en una patente.
+Today, we talk about "cloud computing," "SaaS," and "social networks," and we fully understand what these concepts mean. But 24 years ago, explaining them in a patent was far from easy.
 
-Este fue mi invento con el que me recibí de Ingeniero, WEFIM!. Un sistema web en el que cada usuario tenia un espacio en el que podia no solo alojar archivos de cualquier tipo, sino que también podia compartirlos con otros usuarios. Además tenia una portada en la que podia publicar toda la información que quisiese con otros usuarios.
+This was my invention with which I graduated as an engineer: WEFIM! A web-based system where each user had their own personal space, not only to store files of any type but also to share them with other users. Additionally, each user had a homepage where they could publish any information they wanted to share with others.
 
+Some key features of WEFIM included:
 
-Algunas funciones de WEFIM entre otras:
+User session management: Each user had a username and password to access the system.
 
-*Manejo de sesión de usuarios.  Cada usuario tendrá un nombre de usuario y una contraseña para entrar al sistema.
+Efficient file organization: Users could perform basic operations such as temporarily deleting files (recycle bin), sharing files with others (generating new versions), downloading files to a local machine for editing, and searching for specific files within the system.
 
-*Organizar los archivos, subidos al servidor, de manera eficiente. Se podrán hacer las operaciones básicas como, borrarlos de manera temporal (Manejo de papelera de reciclaje),  compartirlos para que otras personas puedan ver su contenido (generando nuevas versiones del archivo), bajarlos a la maquina local para poder editarlos y buscar un archivo en particular dentro del sistema.
+User discovery: Each user could maintain a personal homepage with relevant information to share. This allowed users to find and communicate with others through an internal messaging system.
 
-*Búsqueda de otros usuarios.  Cada usuario podrá tener una portada inicial con su información relevante que quiera compartir con otros usuarios. De esta forma podrá buscar a otros usuarios para comunicarse con ellos a través de mensajes internos.
+Information security: User sessions were managed to ensure the safety and privacy of all data.
 
-*Control de la seguridad de la información de los usuarios a través de las sesiones de los usuarios. 
+Customizable workspace: Users could configure their interface according to their preferences.
 
-*Configuración del entorno de trabajo.  Cada usuario podrá configurar la interfaz de su sistema de la forma que más desee.
+File transfer via email: Users could send files to others outside the system directly via email.
 
-*Envío y recepción de archivos por email.  El usuario podrá mandar los archivos que desee a través del email a otras personas que no se encuentren en el sistema.
+With these features, WEFIM users no longer needed to carry stacks of CDs or a heavy laptop with important information.
 
-*Editar los archivos en el mismo sistema.  El usuario podra editar el archivo que desee en el sistema.
+Moreover, WEFIM enabled faster and easier information sharing between users through its advanced browser interface, while maintaining maximum security and data integrity for every user.
 
-Con dichas funciones el usuario de WEFIM no tendrá que transportar de un lado a otro, pilas de CD o una pesada notebook con la información más importante.
+Patent:
 
-Además al usuario de WEFIM le será más rápida y sencilla la transferencia de información con otros usuarios a través del explorador avanzado.   El sistema estará diseñado para tener la mayor seguridad e integridad de la información de cada usuario.
-
-
-Patente:
 <img width="637" height="372" alt="image" src="./PatenteWEFIM.png" />
