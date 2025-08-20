@@ -25,16 +25,16 @@
       padding: 40px 20px;
     }
 
-    /* Header sticky SOLO foto + nombre + enlaces */
     header {
       text-align: center;
       position: sticky;
       top: 0;
-      background: white;
+      background: var(--bg-color); /* usa el mismo fondo del body */
       padding: 20px 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: none;
     }
+
 
     header img {
       border-radius: 50%;
