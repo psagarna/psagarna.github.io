@@ -4,7 +4,7 @@ WEBCOBROSBP was a pioneering digital platform designed for educational instituti
 
 The goal was to provide schools and universities with a fully digital and integrated environment, covering every stage of the student lifecycle. From enrollment in specific courses, to tuition and payment management, through to graduation, the system centralized all the relevant information of each student.
 
-Main academic features:
+**Main academic features:
 
 *Student enrollment management.
 
@@ -14,17 +14,19 @@ Main academic features:
 
 *Attendance tracking and monitoring.
 
-*Main administrative features:
+**Main administrative features:
 
-    *Tuition fee management: billing, payments, and tracking.
+*Tuition fee management: billing, payments, and tracking.
 
-    *Financial reporting and cash flow control.
+*Financial reporting and cash flow control.
 
-    *Supplier payment management.
+*Supplier payment management.
 
-    *Historical records and debtor tracking.
+*Historical records and debtor tracking.
 
 With WEBCOBROSBP, institutions could digitalize their entire ecosystem, enabling smooth and efficient interaction among students, teachers, administrators, and parents.
+
+Technology Stack: Java, Struts, log4j, Mysql, Lucene., HTML, Javascript, CSS running on Tomcat Server!
 
 ScreenShots:
 
