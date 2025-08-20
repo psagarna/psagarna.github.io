@@ -25,9 +25,21 @@
       padding: 40px 20px;
     }
 
+    .bio-text {
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
     header {
       text-align: center;
       margin-bottom: 40px;
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 20px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra sutil al hacer scroll */
     }
 
     header img {
@@ -147,7 +159,7 @@
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
       <p class="subtitle">Director of Architecture @WSO2 <br> Phd Candidate @Politécnica de Madrid</p>
-      <p class="subtitle">
+      <p class="bio-text">
       Director of Solution Architecture with extensive experience in designing and implementing high-impact technology solutions focused on business process automation and optimization, systems integration, enterprise architectures, cloud technologies, artificial intelligence, and data governance.
       <br> 
       With a background in Computer Engineering and an MBA, I combine a strong technical foundation with strategic business insight, which has enabled me to add value in complex international projects by aligning technology with corporate objectives.
