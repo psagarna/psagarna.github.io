@@ -37,8 +37,8 @@
 
     header img {
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       max-width: 100%;
       object-fit: cover;
       margin-bottom: 20px;
@@ -115,8 +115,8 @@
       }
 
       header img {
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 160px;
       }
 
       h1 {
@@ -134,8 +134,8 @@
 
     @media (max-width: 480px) {
       header img {
-        width: 80px;
-        height: 80px;
+        width: 160px;
+        height: 160px;
       }
 
       h1 {
