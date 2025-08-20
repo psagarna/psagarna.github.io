@@ -84,7 +84,7 @@
 
     /* BIO alineada a la izquierda */
     .bio-text {
-      text-align: left;
+      text-align: justify;
       max-width: 800px;
       margin: 30px auto;
     }
