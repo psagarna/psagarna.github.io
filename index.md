@@ -157,13 +157,6 @@
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
       <p class="subtitle">Director of Architecture @WSO2 <br> Phd Candidate @Politécnica de Madrid</p>
-      <p class="bio-text">
-      Director of Solution Architecture with extensive experience in designing and implementing high-impact technology solutions focused on business process automation and optimization, systems integration, enterprise architectures, cloud technologies, artificial intelligence, and data governance.
-      <br> 
-      With a background in Computer Engineering and an MBA, I combine a strong technical foundation with strategic business insight, which has enabled me to add value in complex international projects by aligning technology with corporate objectives.
-      <br> 
-      Throughout my career, I have faced demanding challenges across various industries, developing a strong ability to anticipate and resolve problems, manage unforeseen issues, and lead initiatives that drive operational efficiency and innovation. I am distinguished by a holistic vision, strong results orientation, and a deep commitment to technological excellence.
-      </p>
       <nav>
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
@@ -172,6 +165,13 @@
         <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
       </nav>
     </header>
+    <p class="bio-text">
+      Director of Solution Architecture with extensive experience in designing and implementing high-impact technology solutions focused on business process automation and optimization, systems integration, enterprise architectures, cloud technologies, artificial intelligence, and data governance.
+      <br> 
+      With a background in Computer Engineering and an MBA, I combine a strong technical foundation with strategic business insight, which has enabled me to add value in complex international projects by aligning technology with corporate objectives.
+      <br> 
+      Throughout my career, I have faced demanding challenges across various industries, developing a strong ability to anticipate and resolve problems, manage unforeseen issues, and lead initiatives that drive operational efficiency and innovation. I am distinguished by a holistic vision, strong results orientation, and a deep commitment to technological excellence.
+    </p>
 
     <section>
       <h2>Publications and Inventions</h2>
