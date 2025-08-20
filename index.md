@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pablo Sagarna - Director of Arquitecture / Researcher</title>
+  <title>Pablo Sagarna - Director of Architecture / Researcher</title>
   <style>
     :root {
       --primary: #007acc;
@@ -25,45 +25,40 @@
       padding: 40px 20px;
     }
 
-    .bio-text {
-      text-align: left;
-      max-width: 800px;
-      margin: 20px auto;
-    }
-
+    /* Header sticky SOLO foto + nombre + enlaces */
     header {
       text-align: center;
       position: sticky;
       top: 0;
-      background: white;   /* Fondo sólido para tapar lo que hay detrás */
+      background: white;
       padding: 20px 0;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     header img {
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      max-width: 100%;
-      height: auto;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     h1 {
       font-size: 2em;
-      margin-bottom: 5px;
+      margin: 5px 0;
       word-wrap: break-word;
     }
 
     p.subtitle {
       font-size: 1.1em;
       color: #666;
+      margin: 5px 0;
     }
 
     nav {
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -79,12 +74,19 @@
     }
 
     nav a:last-child {
-      border-right: none; /* Elimina el último separador */
+      border-right: none;
     }
 
     nav a:hover {
       text-decoration: underline;
       color: #005999;
+    }
+
+    /* BIO alineada a la izquierda */
+    .bio-text {
+      text-align: left;
+      max-width: 800px;
+      margin: 30px auto;
     }
 
     section {
@@ -100,11 +102,11 @@
     }
 
     ul {
-      margin-left: -19px; /* Ajusta el valor según lo necesites */
-      padding-left: 20px; /* Opcional, controla el espacio antes del contenido de la lista */
+      margin-left: -19px;
+      padding-left: 20px;
     }
 
-    /* Responsive ajustes */
+    /* Responsive */
     @media (max-width: 768px) {
       .container {
         padding: 20px 10px;
@@ -112,7 +114,8 @@
       }
 
       header img {
-        width: 120px;
+        width: 100px;
+        height: 100px;
       }
 
       h1 {
@@ -130,7 +133,8 @@
 
     @media (max-width: 480px) {
       header img {
-        width: 100px;
+        width: 80px;
+        height: 80px;
       }
 
       h1 {
@@ -153,6 +157,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Sticky SOLO esta parte -->
     <header>
       <img src="foto.jpeg" alt="Foto de Pablo Sagarna">
       <h1>Pablo Sagarna</h1>
@@ -165,6 +170,8 @@
         <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
       </nav>
     </header>
+
+    <!-- BIO (ya no sticky) -->
     <p class="bio-text">
       Director of Solution Architecture with extensive experience in designing and implementing high-impact technology solutions focused on business process automation and optimization, systems integration, enterprise architectures, cloud technologies, artificial intelligence, and data governance.
       <br> 
