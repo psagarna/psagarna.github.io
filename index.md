@@ -33,13 +33,11 @@
 
     header {
       text-align: center;
-      margin-bottom: 40px;
       position: sticky;
       top: 0;
-      background: white;
+      background: white;   /* Fondo sólido para tapar lo que hay detrás */
       padding: 20px 0;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra sutil al hacer scroll */
     }
 
     header img {
