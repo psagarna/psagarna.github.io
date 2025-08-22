@@ -185,13 +185,13 @@
       <h2>Publications and Inventions</h2>
       <ul>
         <li>
-          <a href="https://psagarna.github.io/invention/PayrollSoftware" target="_blank">Invention: "Payroll Software for Processing Salaries and Wages</a>.<strong> - 1996.</strong> 
+          <a href="https://psagarna.github.io/invention/PayrollSoftware" target="_blank">Invention: "Payroll Software</a>.<strong> - 1996.</strong> 
         </li>
         <li>
           <a href="https://psagarna.github.io/invention/WEFIM" target="_blank">Invention: "Web File Manager (WEFIM)"</a>.<strong>- 2003.</strong> 
         </li>        
         <li>
-          <a href="https://psagarna.github.io/invention/WEBCOBROSBP" target="_blank">Invention: "Web Cobros BP (WEBCOBROSBP)"</a>.<strong>- 2005.</strong> 
+          <a href="https://psagarna.github.io/invention/WEBCOBROSBP" target="_blank">Invention: "Web Cobros BP"</a>.<strong>- 2005.</strong> 
         </li>  
         <li>
           <a href="https://psagarna.github.io/invention/AgendaWEB" target="_blank">Invention: "Agenda WEB"</a>.<strong>- 2010.</strong> 
