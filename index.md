@@ -167,8 +167,8 @@
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a>
-        <a href="cv/CVPabloSagarna-EN.pdf" target="_blank">CV ENG</a>
-        <a href="cv/CVPabloSagarna-ES.pdf" target="_blank">CV ESP</a>
+        <a href="https://drive.google.com/file/d/1HNCujNt6jcoCDVcL7wcBz9c2Dw051njX/view?usp=sharing" target="_blank">CV ENG</a>
+        <a href="https://drive.google.com/file/d/1AHc8paUbbHa_JBCgmhlS7WFLQKOuYhkx/view?usp=sharing" target="_blank">CV ESP</a>
       </nav>
     </header>
 
