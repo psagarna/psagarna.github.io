@@ -22,6 +22,8 @@ With these features, WEFIM users no longer needed to carry stacks of CDs or a he
 
 Moreover, WEFIM enabled faster and easier information sharing between users through its advanced browser interface, while maintaining maximum security and data integrity for every user.
 
+For more info, write me!
+
 Patent:
 
 <img width="637" height="372" alt="image" src="./PatenteWEFIM.png" />

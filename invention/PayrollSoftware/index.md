@@ -6,6 +6,8 @@ This experience gave me the opportunity to create my first real project for my f
 
 This project became the key motivation that later inspired me to study Software Engineering. 
 
+For more info, write me!
+
 Some screenshots:
 
 

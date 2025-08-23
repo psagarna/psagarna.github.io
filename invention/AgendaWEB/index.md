@@ -7,3 +7,5 @@ It allows any registered user to track online the progress of their procedures i
 In addition, it streamlines the tracking, management, and document storage related to permits, payments, and collection of taxes or fees required by local and regional public entities, for both individuals and organizations.
 
 Technology Stack: Java, PHP, log4j, MySQL, HTML, JavaScript, CSS running on Tomcat and Apache Server
+
+For more info write me!!

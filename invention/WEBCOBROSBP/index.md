@@ -28,6 +28,5 @@ With WEBCOBROSBP, institutions could digitalize their entire ecosystem, enabling
 
 Technology Stack: Java, Struts, log4j, Mysql, Lucene., HTML, Javascript, CSS running on Tomcat Server!
 
-ScreenShots:
-
+For more info, write me!
 
