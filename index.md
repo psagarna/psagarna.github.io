@@ -167,8 +167,8 @@
         <a href="mailto:psagarna@gmail.com">Email</a>
         <a href="https://github.com/psagarna" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/psagarna" target="_blank">LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1xfLP8zLVC13MvDo0A-lzDNonfKqhjTaC/view?usp=sharing" target="_blank">CV ENG</a>
-        <a href="https://drive.google.com/file/d/15JLMWdkmPhi6AbSRSQZ7NrWbBhUq8sSl/view?usp=drive_link)/view?usp=sharing" target="_blank">CV ESP</a>
+        <a href="https://drive.google.com/file/d/1icuJ8BKKDEbX3SDAsgq5xnG5TqyMRuQP/view?usp=sharing" target="_blank">CV ENG</a>
+        <a href="https://drive.google.com/file/d/15YDibTqUcBI6vnf7pW8Pk3IpxU17m27z/view?usp=sharing" target="_blank">CV ESP</a>
       </nav>
     </header>
 
