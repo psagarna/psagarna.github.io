@@ -202,6 +202,9 @@
         <li>
           <a href="https://medium.com/@psagarna/estrategias-de-arquitectura-para-minimizar-tu-factura-ia-80045b6505bd" target="_blank">Estrategias de Arquitectura para minimizar tu factura IA</a>.<strong> - 2026.</strong> 
         </li>
+        <li>
+          <a href="https://psagarna.github.io/invention/OTS" target="_blank">Invention: "Open Tool Specification"</a>.<strong>- 2026.</strong> 
+        </li>         
       </ul>
     </section>
   </div>
