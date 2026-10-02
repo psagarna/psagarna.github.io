@@ -296,6 +296,7 @@ A deployment starts without a build step, in either of two ways. From the editor
 A companion tool for the editor serves both to write the specification and to watch what the OTS gateway does with it; it carries the gateway inside, so installing the extension is the whole installation. The specification is edited as a form over tools, resources, prompts, schemas and scenarios, where every edit replaces exactly the value it changes so that comments, key order and formatting survive. The deployment is edited as a form over plans, consumers, credentials and MCPs, with a secret store that never shows a value back. A live map shows who calls, what they call and what answers, with every call travelling it in real time, and a permission is granted by dragging a line between a consumer and a capability. Any tool can be turned into a ready-to-run `curl` for a chosen consumer against the backend or the mock, a breakpoint can hold a real in-flight call to inspect what the agent asked and what is about to happen, and an entire working deployment can be generated from nothing.
 
 ![OTS Designer — the map: consumers, tools, backends and the live journal](ots-designer-map.png)
+[Download from Microsoft VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablosagarna.opentool-designer)
 
 ## 7. Related work
 
