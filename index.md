@@ -182,10 +182,10 @@
     </p>
 
     <section>
-      <h2>Publications and Inventions</h2>
+      <h2>Publications</h2>
       <ul>
         <li>
-          <a href="https://psagarna.github.io/invention/OTS" target="_blank">Invention: "Open Tool Specification"</a>.<strong>- 2026.</strong> 
+          <a href="https://psagarna.github.io/OTS" target="_blank">Invention: "Open Tool Specification"</a>.<strong>- 2026.</strong> 
         </li>
         <li>
           <a href="https://medium.com/@psagarna/estrategias-de-arquitectura-para-minimizar-tu-factura-ia-80045b6505bd" target="_blank">Estrategias de Arquitectura para minimizar tu factura IA</a>.<strong> - 2026.</strong> 
@@ -194,16 +194,16 @@
           <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef" target="_blank">¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida?</a>.<strong> - 2025.</strong> 
         </li>
         <li>
-          <a href="https://psagarna.github.io/invention/AgendaWEB" target="_blank">Invention: "Agenda WEB"</a>.<strong>- 2010.</strong> 
+          <a href="https://psagarna.github.io/AgendaWEB" target="_blank">Invention: "Agenda WEB"</a>.<strong>- 2010.</strong> 
         </li>         
         <li>
-          <a href="https://psagarna.github.io/invention/WEBCOBROSBP" target="_blank">Invention: "Web Cobros BP"</a>.<strong>- 2005.</strong> 
+          <a href="https://psagarna.github.io/WEBCOBROSBP" target="_blank">Invention: "Web Cobros BP"</a>.<strong>- 2005.</strong> 
         </li>  
         <li>
-          <a href="https://psagarna.github.io/invention/WEFIM" target="_blank">Invention: "Web File Manager (WEFIM)"</a>.<strong>- 2003.</strong> 
+          <a href="https://psagarna.github.io/WEFIM" target="_blank">Invention: "Web File Manager (WEFIM)"</a>.<strong>- 2003.</strong> 
         </li>        
         <li>
-          <a href="https://psagarna.github.io/invention/PayrollSoftware" target="_blank">Invention: "Payroll Software</a>.<strong> - 1996.</strong> 
+          <a href="https://psagarna.github.io/PayrollSoftware" target="_blank">Invention: "Payroll Software</a>.<strong> - 1996.</strong> 
         </li>
       </ul>
     </section>
