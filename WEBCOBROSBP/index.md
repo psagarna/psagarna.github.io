@@ -1,32 +1,41 @@
-WEB COBROS BP - Digital Platform for Educational Institution Management -  2005
+# WEB COBROS BP: Digital Platform for Educational Institution Management
 
-WEBCOBROSBP is a pioneering digital platform designed for educational institutions, enabling a comprehensive 360° management of both academic and administrative processes.
+**Pablo D. Sagarna**  
+2005
 
-The goal is to provide to Educational Institutions (schools and universities) with a fully digital and integrated environment, covering every stage of the student lifecycle. From enrollment in specific courses, to tuition and payment management, through to graduation, the system centralized all the relevant information of each student.
+## Overview
 
-Main academic features:
+**WEBCOBROSBP** is a pioneering digital platform designed for educational institutions, enabling comprehensive 360° management of both academic and administrative processes.
 
-*Student enrollment management.
+The goal is to provide educational institutions (schools and universities) with a fully digital and integrated environment covering every stage of the student lifecycle. From enrollment in specific courses, through tuition and payment management, to graduation, the system centralized all the relevant information about each student.
 
-*Tools for teachers to assign and grade homework.
+## Main academic features
 
-*File sharing between teachers and students.
+- Student enrollment management.
+- Tools for teachers to assign and grade homework.
+- File sharing between teachers and students.
+- Attendance tracking and monitoring.
 
-*Attendance tracking and monitoring.
+## Main administrative features
 
-Main administrative features:
+- Tuition fee management: billing, payments, and tracking.
+- Financial reporting and cash flow control.
+- Supplier payment management.
+- Historical records and debtor tracking.
 
-*Tuition fee management: billing, payments, and tracking.
-
-*Financial reporting and cash flow control.
-
-*Supplier payment management.
-
-*Historical records and debtor tracking.
+## Impact
 
 With WEBCOBROSBP, institutions could digitalize their entire ecosystem, enabling smooth and efficient interaction among students, teachers, administrators, and parents.
 
-Technology Stack: Java, Struts, log4j, Mysql, Lucene., HTML, Javascript, CSS running on Tomcat Server!
+## Technology Stack
 
-For more info, write me!
+- **Languages:** Java, HTML, JavaScript, CSS
+- **Framework:** Apache Struts
+- **Search:** Apache Lucene
+- **Logging:** log4j
+- **Database:** MySQL
+- **Server:** Apache Tomcat
 
+---
+
+*For more info, [write me](mailto:psagarna@gmail.com)!*
