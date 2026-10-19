@@ -1,5 +1,9 @@
 # The OpenTool Specification: A Contract-First Governance Layer for Tools, Resources and Prompts of AI Agents
 
+**Pablo D. Sagarna**  
+28 September 2026\
+[github.com/psagarna/open-tool-specification](https://github.com/psagarna/open-tool-specification)
+
 ## Abstract
 
 Agents need access to external tools to perform actions, retrieve information, and interact with enterprise systems. The Model Context Protocol (MCP) facilitates this integration through servers that expose **tools**, which provide capabilities that consuming clients can invoke; **resources**, which provide read-only information that the host can add to the model's context when needed and are typically identified by a fixed URI or a parameterized URI template; and **prompts**, which are predefined, parameterized messages that MCP clients typically expose as commands (e.g., a slash command) to standardize recurring tasks and encapsulate effective prompting practices.
@@ -348,7 +352,7 @@ The OTS Gateway acts like any other gateway, receiving a request and routing it 
 
 ![OTS Visual Designer for VS Code — the map: consumers, tools, backends and the live journal](ots-designer-map.png)
 
-*Download from the Microsoft VS Code Marketplace.*
+*[Download from the Microsoft VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablosagarna.opentool-designer).*
 
 ## 6. Conclusion
 
