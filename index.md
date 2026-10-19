@@ -191,7 +191,7 @@
           <a href="https://medium.com/@psagarna/estrategias-de-arquitectura-para-minimizar-tu-factura-ia-80045b6505bd" target="_blank">Estrategias de Arquitectura para minimizar tu factura IA</a>.<strong> - 2026.</strong> 
         </li>                 
         <li>
-          <a href="https://medium.com/@psagarna/c%C3%B3mo-agregar-un-evento-ante-un-cambio-de-estado-de-una-api-en-su-ciclo-de-vida-7c9cac3798ef" target="_blank">¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida?</a>.<strong> - 2025.</strong> 
+          <a href="https://psagarna.github.io/Event" target="_blank">¿Cómo agregar un evento ante un cambio de estado de una API en su ciclo de vida?</a>.<strong> - 2025.</strong> 
         </li>
         <li>
           <a href="https://psagarna.github.io/AgendaWEB" target="_blank">Invention: "Agenda WEB"</a>.<strong>- 2010.</strong> 
