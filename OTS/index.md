@@ -104,6 +104,7 @@ Based on the capabilities selected by the model to resolve the request, the OTS 
 ![Mortgage use case through the OTS Gateway, governing tools, resources and prompts](mortgage-use-case-OTS-GW-3primitives-en.png)
 
 ## 3. Benefits of the Open Tool Specification
+The adoption of OTS can provide benefits in terms of efficiency, security, scalability, and flexibility in agent tool management. These benefits range from simplifying tool discovery and maintenance to evolving the way business capabilities are designed and exposed.
 
 ### 3.1 Unified discovery and complexity reduction
 
@@ -349,6 +350,16 @@ The OTS Gateway acts like any other gateway, receiving a request and routing it 
 ```
 
 ### 5.2 VS Code plugin — Visual Designer for OTS
+
+The **Visual Designer for Open Tool Specification (OTS)** extension provides a visual development environment for designing, exploring, configuring, testing, and debugging projects based on the OTS specification.
+
+Its main features are:
+
+- **Visual Map.** Provides an interactive graphical representation of the OTS specification, allowing developers to explore the tools, resources, and prompts defined in the project. New elements can be added and existing ones modified directly from this view, while also making it easier to understand the relationships between them.
+- **Embedded OTS Gateway.** Integrates a gateway that exposes the OTS specification through an endpoint, enabling agents to discover and access the available tools, resources, and prompts according to their configured permissions, scopes, and subscriptions. It also allows developers to visualize each request in real time through an interactive execution map that traces the different stages of execution until the request is resolved by the backend MCP servers. This visualization makes it possible to track interactions and inspect the information exchanged at different points in the execution flow, simplifying observability, monitoring, and debugging. To enable this functionality, the `ots.gatewayPath` setting must be configured with the path to the gateway binary corresponding to the operating system and architecture in use.
+- **Integrated Debugger.** Provides end-to-end visibility into execution flows, requests, responses, and interactions with backend services. This enables developers to analyze agent behavior, identify and resolve errors, and optimize workflows. It also supports the creation and management of test cases to validate each component independently and verify that it continues to behave as expected as the specification evolves.
+
+The extension allows developers to switch between the visual interface and text editing at any time using the **Open as text** option in the upper-left corner. Both views remain synchronized and operate on the same file, combining the convenience of visual editing with direct access to the underlying specification.
 
 ![OTS Visual Designer for VS Code — the map: consumers, tools, backends and the live journal](ots-designer-map.png)
 
