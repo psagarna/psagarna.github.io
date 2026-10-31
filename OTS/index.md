@@ -376,3 +376,13 @@ Existing approaches, such as tool retrieval using RAGs, hierarchical agents, and
 The proposal aims to reduce integration complexity, avoid the individual exploration of each server, and facilitate a coherent governance and security model. Its main value lies in separating the discovery and consumption of tools, resources, and prompts from the specific details of how these are implemented.
 
 **Ultimately, OTS aims to provide a common layer between AI agents and the ecosystem of tools, resources, and prompts, promoting simpler, more governable, and scalable discovery and access as the architecture grows.**
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWR8XND9PL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWR8XND9PL');
+</script>
