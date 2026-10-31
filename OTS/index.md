@@ -377,6 +377,31 @@ The proposal aims to reduce integration complexity, avoid the individual explora
 
 **Ultimately, OTS aims to provide a common layer between AI agents and the ecosystem of tools, resources, and prompts, promoting simpler, more governable, and scalable discovery and access as the architecture grows.**
 
+## 7. References
+
+1. **OpenTool Specification repository** — [github.com/psagarna/open-tool-specification](https://github.com/psagarna/open-tool-specification)
+2. **OpenTool Designer (VS Code plugin)** — [Download from the Microsoft VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablosagarna.opentool-designer)
+3. **OTS Gateway prototype (distribution)** — [open-tool-specification/dist](https://github.com/psagarna/open-tool-specification/tree/main/dist)
+4. **Blank example** — [open-tool-specification/examples/blank](https://github.com/psagarna/open-tool-specification/tree/main/examples/blank)
+
+## Comments
+
+<script src="https://giscus.app/client.js"
+        data-repo="psagarna/open-tool-specification"
+        data-repo-id="R_kgDOUx8TKQ"
+        data-category="General"
+        data-category-id="DIC_kwDOUx8TKc4DKEoB"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="es"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWR8XND9PL"></script>
 <script>
