@@ -1,87 +1,574 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent Skill — Pablo Sagarna</title>
-<meta name="description" content="An Agent Skill that lets AI agents answer questions about Pablo Sagarna's professional profile and assess his fit for a role.">
-<link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md">
-<style>
-  :root {
-    --ink: #1F3864; --text: #1d2330; --muted: #5b6472; --rule: #d7dce4;
-    --bg: #ffffff; --code-bg: #f3f5f9; --link: #1f4fa8;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Skill - Pablo Sagarna</title>
+  <meta name="description" content="Pablo Sagarna's CV as an Agent Skill: let your AI agent answer questions about his experience and assess his fit for a role.">
+  <link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
     :root {
-      --ink: #a9c1ee; --text: #e4e8ef; --muted: #9aa3b2; --rule: #2c3442;
-      --bg: #12161d; --code-bg: #1b212b; --link: #8fb4ff;
-      color-scheme: dark;
+      --primary: #0b6bcb;
+      --primary-soft: #e8f1fb;
+      --success: #12a37f;
+      --warning: #b7791f;
+      --text: #1d2433;
+      --muted: #5b6475;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --border: #e3e7ee;
+      --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.06);
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 17px/1.6 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 72px; }
-  a { color: var(--link); }
-  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-  .back { font-size: 15px; color: var(--muted); }
-  h1 { color: var(--ink); font-size: 2.1rem; line-height: 1.2; margin: 28px 0 8px; letter-spacing: -0.01em; }
-  .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 36px; }
-  h2 { color: var(--ink); font-size: 1.15rem; margin: 40px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
-  .ask {
-    margin: 0 0 8px; padding: 22px 24px; background: var(--code-bg);
-    border-left: 4px solid var(--ink); font-size: 1.2rem; line-height: 1.45; color: var(--text);
-  }
-  .ask-note { color: var(--muted); font-size: 15px; margin: 0; }
-  code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 14px; }
-  pre { background: var(--code-bg); padding: 14px 16px; overflow-x: auto; margin: 10px 0 0; }
-  ol { padding-left: 1.3em; } li { margin: 6px 0; }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; }
-  td { padding: 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  td:first-child { width: 42%; padding-right: 12px; }
-  .download {
-    display: inline-block; margin-top: 8px; padding: 10px 18px; background: var(--ink); color: var(--bg);
-    text-decoration: none; font-weight: 600; border-radius: 4px;
-  }
-  footer { margin-top: 56px; color: var(--muted); font-size: 15px; }
-</style>
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #5aa9f5;
+        --primary-soft: #16263a;
+        --success: #34c99f;
+        --warning: #e0a84a;
+        --text: #e6e9ef;
+        --muted: #9aa3b2;
+        --bg: #0f1420;
+        --surface: #161c2a;
+        --border: #262e3f;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top bar (sticky) */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      height: 60px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+    .brand .crumb { color: var(--muted); font-weight: 500; }
+    .brand .crumb::before { content: "/"; margin-right: 10px; opacity: 0.5; }
+
+    .topbar nav { display: flex; align-items: center; gap: 20px; font-size: 0.95em; }
+    .topbar nav a { color: var(--muted); font-weight: 500; }
+    .topbar nav a:hover { color: var(--primary); text-decoration: none; }
+
+    /* Buttons */
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 10px;
+      font-size: 0.92em;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: border-color 0.15s, color 0.15s, transform 0.15s;
+    }
+    .btn:hover {
+      text-decoration: none;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+    .btn.primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .btn.primary:hover { color: #fff; filter: brightness(1.08); }
+    .btn svg { width: 17px; height: 17px; flex-shrink: 0; }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      align-items: center;
+      gap: 48px;
+      padding: 64px 0 40px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85em;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 5px 14px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+    }
+    .eyebrow .sep { opacity: 0.45; margin: 0 4px; }
+
+    h1 {
+      font-size: 2.6em;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+    }
+    h1 em { font-style: normal; color: var(--primary); }
+
+    .subtitle {
+      font-size: 1.1em;
+      color: var(--muted);
+      margin: 0 0 26px;
+    }
+
+    /* Chat preview */
+    .chat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .chat-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85em;
+      color: var(--muted);
+    }
+    .chat-head .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); }
+    .chat-head code { font-family: var(--mono); color: var(--text); }
+    .chat-body { padding: 20px 18px; display: grid; gap: 14px; font-size: 0.92em; }
+
+    .msg-user {
+      justify-self: end;
+      max-width: 85%;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 14px 14px 4px 14px;
+    }
+    .msg-user .attach {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85em;
+      opacity: 0.8;
+    }
+
+    .msg-agent {
+      max-width: 94%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      border-radius: 14px 14px 14px 4px;
+    }
+    .msg-agent p { margin: 0 0 10px; }
+    .verdict {
+      display: inline-block;
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--success) 15%, transparent);
+      color: var(--success);
+      margin-bottom: 8px;
+    }
+    .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+    .checks li { display: flex; gap: 8px; line-height: 1.45; }
+    .checks li::before { flex-shrink: 0; font-weight: 700; }
+    .checks .ok::before { content: "✓"; color: var(--success); }
+    .checks .gap::before { content: "?"; color: var(--warning); }
+    .checks .ask::before { content: "→"; color: var(--primary); }
+
+    /* Sections */
+    section { padding: 32px 0; scroll-margin-top: 70px; }
+
+    h2 {
+      font-size: 1.35em;
+      letter-spacing: -0.01em;
+      margin: 0 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px 28px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05em;
+      margin: 0 0 10px;
+    }
+    .card p { margin: 0 0 14px; color: var(--muted); }
+    .card p:last-child { margin-bottom: 0; }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .icon svg { width: 19px; height: 19px; }
+
+    /* Steps */
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 12px; }
+    .steps li { display: flex; align-items: baseline; gap: 12px; counter-increment: step; }
+    .steps li::before {
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      font-size: 0.8em;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .url {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+    }
+    .url code {
+      flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap;
+      font-family: var(--mono); font-size: 0.82em;
+    }
+    .url button {
+      font: inherit; font-size: 0.85em; font-weight: 600; cursor: pointer; flex-shrink: 0;
+      color: var(--primary); background: var(--primary-soft); border: 0; border-radius: 8px; padding: 6px 12px;
+    }
+
+    /* Files */
+    .file {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .file:hover {
+      text-decoration: none;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .file .body { flex: 1; min-width: 0; }
+    .file .title { display: block; font-family: var(--mono); font-size: 0.92em; font-weight: 600; }
+    .file .meta { font-size: 0.85em; color: var(--muted); }
+    .file .arrow { color: var(--muted); transition: transform 0.15s, color 0.15s; }
+    .file:hover .arrow { color: var(--primary); transform: translateX(3px); }
+    .file.main { grid-column: 1 / -1; border-color: color-mix(in srgb, var(--primary) 40%, var(--border)); }
+
+    /* Contact banner */
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px 32px;
+      border-radius: 16px;
+      background: var(--primary-soft);
+      border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+    }
+    .cta h2 { margin: 0 0 4px; }
+    .cta h2::after { display: none; }
+    .cta p { margin: 0; color: var(--muted); }
+
+    .btn:focus-visible, .file:focus-visible, .url button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    footer {
+      padding: 32px 0 48px;
+      text-align: center;
+      font-size: 0.85em;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 32px; }
+      .grid.cols-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .topbar nav { display: none; }
+      .hero { padding: 40px 0 24px; }
+      h1 { font-size: 2em; }
+      .grid.cols-2 { grid-template-columns: 1fr; }
+      .card { padding: 22px 20px; }
+      .cta { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
+      .file .arrow { display: none; }
+    }
+  </style>
 </head>
 <body>
-<main>
-  <a class="back" href="https://psagarna.github.io/">Pablo Sagarna</a>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="/">
+        <img src="/foto.jpeg" alt="">
+        Pablo Sagarna
+        <span class="crumb">Agent Skill</span>
+      </a>
+      <nav>
+        <a href="#can">What it does</a>
+        <a href="#use">How to use</a>
+        <a href="#inside">Files</a>
+        <a href="/">&larr; Profile</a>
+      </nav>
+    </div>
+  </header>
 
-  <h1>My CV, as an agent skill</h1>
-  <p class="lede">Give this skill to your AI agent and it can answer questions about my experience, check my fit for a role and draft a candidate summary — in English or Spanish, using only what is in my CV.</p>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Agent Skill<span class="sep">|</span>English · Español</span>
+        <h1>My CV, ready for <em>your AI agent</em></h1>
+        <p class="subtitle">Install it and ask about my experience, get a tailored pitch or check my fit for a role. Answers come only from my CV.</p>
+        <div class="links">
+          <a class="btn primary" href="pablo-sagarna-profile.zip" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+            Download skill
+          </a>
+          <a class="btn" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/SKILL.md" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            View SKILL.md
+          </a>
+        </div>
+      </div>
 
-  <p class="ask">“Does Pablo Sagarna fit this role?” — and paste the job description.</p>
-  <p class="ask-note">The agent replies with a verdict, the matching experience, any gaps and questions worth asking me.</p>
+      <div class="chat" aria-label="Example conversation with the skill">
+        <div class="chat-head">
+          <span class="dot"></span>
+          Skill loaded: <code>pablo-sagarna-profile</code>
+        </div>
+        <div class="chat-body">
+          <div class="msg-user">
+            Does Pablo Sagarna fit this Head of Architecture role?
+            <span class="attach">📎 job-description.pdf</span>
+          </div>
+          <div class="msg-agent">
+            <span class="verdict">Strong fit</span>
+            <p>20+ years in enterprise and integration architecture, now focused on generative and agentic AI.</p>
+            <ul class="checks">
+              <li class="ok">Reference architectures for AI, APIs and data at WSO2 and Accenture</li>
+              <li class="ok">Led teams of architects with P&amp;L and budget ownership</li>
+              <li class="gap">Domain experience in your sector: not shown in profile</li>
+              <li class="ask">Ask him: how he took a RAG system into production</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2>Use it in Claude</h2>
-  <ol>
-    <li>Download the skill.</li>
-    <li>Add it in Claude from the Skills section of your settings.</li>
-    <li>Ask about me in any conversation.</li>
-  </ol>
-  <a class="download" href="pablo-sagarna-profile.zip" download>Download skill (.zip)</a>
+    <section id="can">
+      <h2>What your agent can do</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+            Check fit for a role
+          </h3>
+          <p>Paste a job description. Get a verdict, matching experience, gaps and interview questions.</p>
+        </div>
+        <div class="card">
+          <h3>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+            Write a pitch or bio
+          </h3>
+          <p>An 80–150 word summary aimed at executive, architecture or applied AI audiences.</p>
+        </div>
+        <div class="card">
+          <h3>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg></span>
+            Answer quick facts
+          </h3>
+          <p>Roles, dates, certifications, stack or projects, in English or Spanish.</p>
+        </div>
+      </div>
+    </section>
 
-  <h2>Use it with any other agent</h2>
-  <p>Point your agent or LLM at the skill file. It links to the rest.</p>
-  <pre>https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md</pre>
+    <section id="use">
+      <h2>How to use</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>In Claude</h3>
+          <ol class="steps">
+            <li>Download the skill.</li>
+            <li>Add it from the Skills section of your Claude settings.</li>
+            <li>Ask about me in any conversation.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>With any other agent or LLM</h3>
+          <p>Point it at the skill file. It links to the rest.</p>
+          <div class="url">
+            <code id="raw">https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md</code>
+            <button type="button" id="copy">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2>What’s inside</h2>
-  <table>
-    <tr><td><a href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/SKILL.md">SKILL.md</a></td><td>Instructions and ground rules for the agent</td></tr>
-    <tr><td><a href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/cv-en.md">CV in English</a> and <a href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/cv-es.md">Spanish</a></td><td>Full experience, education, certifications and stack</td></tr>
-    <tr><td><a href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/projects.md">Projects</a></td><td>OTS, PortableModel and PortableGW</td></tr>
-    <tr><td><a href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/assets/resume.json">resume.json</a></td><td>Structured CV in the JSON Resume schema</td></tr>
-  </table>
+    <section id="inside">
+      <h2>What's inside</h2>
+      <div class="grid cols-2">
+        <a class="file main" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/SKILL.md" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4l-6.3 4.4L8 13.6 2 9.2h7.6z"/></svg></span>
+          <span class="body">
+            <span class="title">SKILL.md</span>
+            <span class="meta">Instructions and ground rules for the agent</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a class="file" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/cv-en.md" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span>
+          <span class="body">
+            <span class="title">cv-en.md</span>
+            <span class="meta">Full CV in English (UK)</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a class="file" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/cv-es.md" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span>
+          <span class="body">
+            <span class="title">cv-es.md</span>
+            <span class="meta">CV completo en español</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a class="file" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/references/projects.md" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg></span>
+          <span class="body">
+            <span class="title">projects.md</span>
+            <span class="meta">OTS, PortableModel and PortableGW</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+        <a class="file" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/assets/resume.json" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg></span>
+          <span class="body">
+            <span class="title">resume.json</span>
+            <span class="meta">Structured CV (JSON Resume schema)</span>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <div>
+          <h2>Prefer to talk directly?</h2>
+          <p>Write to me about roles, projects or collaborations.</p>
+        </div>
+        <div class="links">
+          <a class="btn primary" href="mailto:psagarna+job@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email me
+          </a>
+          <a class="btn" href="https://linkedin.com/in/psagarna" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    Prefer to talk directly? Write to <a href="mailto:psagarna+job@gmail.com">psagarna+job@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/psagarna/">LinkedIn</a>.
+    &copy; <span id="year">2026</span> Pablo Sagarna
   </footer>
-</main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('copy').addEventListener('click', function () {
+      var b = this, t = document.getElementById('raw').textContent;
+      navigator.clipboard.writeText(t).then(function () {
+        b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600);
+      });
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3X40PC499C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3X40PC499C');
+  </script>
 </body>
 </html>
