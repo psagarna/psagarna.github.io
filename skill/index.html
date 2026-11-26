@@ -262,6 +262,7 @@
     }
     .card h3 {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 10px;
       font-size: 1.05em;
@@ -271,8 +272,81 @@
     .card p:last-child { margin-bottom: 0; }
 
     .grid { display: grid; gap: 16px; }
+    .grid > *, .hero > * { min-width: 0; }
     .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
     .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .card.wide { grid-column: 1 / -1; border-color: color-mix(in srgb, var(--primary) 40%, var(--border)); }
+    .card p code { font-family: var(--mono); font-size: 0.88em; color: var(--text); }
+    .card.wide > p { margin-bottom: 14px; }
+    .card .panel p { margin: 14px 0 10px; }
+    .card .panel p:first-child { margin-top: 0; }
+    .card .steps code, .card .panel p code { font-family: var(--mono); font-size: 0.88em; color: var(--text); }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 22px 0 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tabs button {
+      font: inherit;
+      font-size: 0.9em;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--muted);
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      padding: 8px 12px;
+    }
+    .tabs button:hover { color: var(--primary); }
+    .tabs button[aria-selected="true"] { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+    .tabs button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    .code {
+      position: relative;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .code pre {
+      margin: 0;
+      padding: 14px 16px;
+      padding-right: 76px;
+      overflow-x: auto;
+      font-family: var(--mono);
+      font-size: 0.82em;
+      line-height: 1.55;
+    }
+    .code pre code { font-family: inherit; }
+    .code .copy {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font: inherit;
+      font-size: 0.8em;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--primary);
+      background: var(--primary-soft);
+      border: 0;
+      border-radius: 8px;
+      padding: 5px 10px;
+    }
+
+    .badge {
+      font-size: 0.68em;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--success) 15%, transparent);
+      color: var(--success);
+    }
 
     .icon {
       display: inline-flex;
@@ -289,9 +363,12 @@
 
     /* Steps */
     .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 12px; }
-    .steps li { display: flex; align-items: baseline; gap: 12px; counter-increment: step; }
+    .steps li { position: relative; padding-left: 36px; counter-increment: step; }
     .steps li::before {
       content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -403,17 +480,17 @@
   <main class="container">
     <section class="hero">
       <div>
-        <span class="eyebrow">Agent Skill<span class="sep">|</span>English · Español</span>
+        <span class="eyebrow">Agent Skill<span class="sep">|</span>MCP server<span class="sep">|</span>English · Español</span>
         <h1>My CV, ready for <em>your AI agent</em></h1>
-        <p class="subtitle">Install it and ask about my experience, get a tailored pitch or check my fit for a role. Answers come only from my CV.</p>
+        <p class="subtitle">Connect it as an MCP server or install it as a skill, then ask about my experience, get a tailored pitch or check my fit for a role. Answers come only from my CV.</p>
         <div class="links">
           <a class="btn primary" href="pablo-sagarna-profile.zip" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
             Download skill
           </a>
-          <a class="btn" href="https://github.com/psagarna/psagarna.github.io/blob/main/skill/pablo-sagarna-profile/SKILL.md" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
-            View SKILL.md
+          <a class="btn" href="#use">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V2M15 7V2M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></svg>
+            Connect MCP
           </a>
         </div>
       </div>
@@ -472,8 +549,73 @@
     <section id="use">
       <h2>How to use</h2>
       <div class="grid cols-2">
+        <div class="card wide">
+          <h3>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V2M15 7V2M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></svg></span>
+            MCP server <span class="badge">Fastest, nothing to install</span>
+          </h3>
+          <p>A public remote MCP server (Streamable HTTP, no login). Tools: <code>get_cv</code>, <code>get_projects</code> and <code>check_fit</code>; resources: both CVs, projects and <code>resume.json</code>.</p>
+          <div class="url">
+            <code>https://mcp.psagarna.workers.dev/mcp</code>
+            <button type="button" class="copy">Copy</button>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="How to connect">
+            <button type="button" role="tab" aria-selected="true" aria-controls="tab-claude" id="t-claude">Claude</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-code" id="t-code" tabindex="-1">Claude Code</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-other" id="t-other" tabindex="-1">Other clients</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-curl" id="t-curl" tabindex="-1">curl</button>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-claude" aria-labelledby="t-claude">
+            <ol class="steps">
+              <li>In claude.ai or Claude Desktop, open Settings → Connectors.</li>
+              <li>Click Add custom connector. Name it <code>Pablo Sagarna CV</code> and paste the URL above.</li>
+              <li>In a new chat, enable the connector from the tools menu.</li>
+              <li>Ask “Does Pablo Sagarna fit this role?” and paste the job description.</li>
+            </ol>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-code" aria-labelledby="t-code" hidden>
+            <ol class="steps">
+              <li>Add the server from your terminal:</li>
+            </ol>
+            <div class="code"><pre><code>claude mcp add --transport http pablo-sagarna https://mcp.psagarna.workers.dev/mcp</code></pre><button type="button" class="copy">Copy</button></div>
+            <ol class="steps" start="2">
+              <li>Run <code>/mcp</code> inside Claude Code to check it is connected.</li>
+              <li>Ask about me, or paste a job description and ask whether I fit.</li>
+            </ol>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-other" aria-labelledby="t-other" hidden>
+            <p>Cursor, Windsurf and most MCP clients accept a remote server in their MCP config file (for Cursor, <code>~/.cursor/mcp.json</code>):</p>
+            <div class="code"><pre><code>{
+  "mcpServers": {
+    "pablo-sagarna": {
+      "url": "https://mcp.psagarna.workers.dev/mcp"
+    }
+  }
+}</code></pre><button type="button" class="copy">Copy</button></div>
+            <p>VS Code uses <code>.vscode/mcp.json</code> with <code>"servers"</code> and <code>"type": "http"</code>. Check your client's docs for the exact key names.</p>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-curl" aria-labelledby="t-curl" hidden>
+            <p>The server speaks JSON-RPC over HTTP, so you can try it without an agent. List the tools:</p>
+            <div class="code"><pre><code>curl -s https://mcp.psagarna.workers.dev/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'</code></pre><button type="button" class="copy">Copy</button></div>
+            <p>Get my CV in Spanish:</p>
+            <div class="code"><pre><code>curl -s https://mcp.psagarna.workers.dev/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_cv","arguments":{"lang":"es"}}}'</code></pre><button type="button" class="copy">Copy</button></div>
+            <p>Check fit for a role. It returns my CV, projects and the format the assessment should follow, ready to pass to your LLM:</p>
+            <div class="code"><pre><code>curl -s https://mcp.psagarna.workers.dev/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"check_fit","arguments":{"job_description":"Head of AI Architecture: 10+ years in enterprise architecture, LLMs and cloud","lang":"en"}}}'</code></pre><button type="button" class="copy">Copy</button></div>
+          </div>
+        </div>
         <div class="card">
-          <h3>In Claude</h3>
+          <h3>Agent Skill in Claude</h3>
           <ol class="steps">
             <li>Download the skill.</li>
             <li>Add it from the Skills section of your Claude settings.</li>
@@ -484,8 +626,8 @@
           <h3>With any other agent or LLM</h3>
           <p>Point it at the skill file. It links to the rest.</p>
           <div class="url">
-            <code id="raw">https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md</code>
-            <button type="button" id="copy">Copy</button>
+            <code>https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md</code>
+            <button type="button" class="copy">Copy</button>
           </div>
         </div>
       </div>
@@ -563,10 +705,29 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('copy').addEventListener('click', function () {
-      var b = this, t = document.getElementById('raw').textContent;
-      navigator.clipboard.writeText(t).then(function () {
-        b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600);
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs [role="tab"]'));
+    function select(tab) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus(); }
+      });
+    });
+
+    document.querySelectorAll('.copy').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.previousElementSibling.textContent;
+        navigator.clipboard.writeText(t).then(function () {
+          b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600);
+        });
       });
     });
   </script>

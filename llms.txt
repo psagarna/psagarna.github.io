@@ -2,6 +2,10 @@
 
 > CTO and Director of Enterprise Architecture & AI (WSO2, ex-Accenture, MuleSoft/Salesforce, IBM). 20+ years in enterprise architecture, integration and digital transformation across Europe and LATAM; recent focus on generative and agentic AI, MCP governance and LLM gateways. Contact: psagarna+job@gmail.com
 
+## MCP server
+- [Remote MCP server](https://mcp.psagarna.workers.dev/mcp): Streamable HTTP, no auth. Tools: get_cv(lang), get_projects(), check_fit(job_description, lang)
+- [How to connect](https://psagarna.github.io/skill/#use): Claude, Claude Code, other MCP clients and curl examples
+
 ## Agent skill
 - [SKILL.md](https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/SKILL.md): instructions for agents answering questions about Pablo or assessing his fit for a role
 - [CV (English, UK)](https://raw.githubusercontent.com/psagarna/psagarna.github.io/main/skill/pablo-sagarna-profile/references/cv-en.md)
