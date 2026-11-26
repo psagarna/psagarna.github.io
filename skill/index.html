@@ -337,6 +337,48 @@
       padding: 5px 10px;
     }
 
+    /* MCP console */
+    .console-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .console-form label { display: grid; gap: 6px; font-size: 0.85em; font-weight: 600; color: var(--muted); }
+    .console-form .full { grid-column: 1 / -1; }
+    .console-form [hidden] { display: none; }
+    .console-form select, .console-form textarea {
+      font: inherit;
+      font-size: 1.05em;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 12px;
+      width: 100%;
+    }
+    .console-form textarea { resize: vertical; min-height: 96px; }
+    .console-form select:focus-visible, .console-form textarea:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    .console-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+    .console-actions .btn { font: inherit; font-size: 0.92em; font-weight: 500; cursor: pointer; }
+    .console-actions .btn[disabled] { opacity: 0.6; cursor: progress; }
+    .console-out {
+      margin: 16px 0 0;
+      padding: 16px 18px;
+      min-height: 120px;
+      max-height: 440px;
+      overflow: auto;
+      border-radius: 10px;
+      background: #0f1420;
+      color: #e6e9ef;
+      font-family: var(--mono);
+      font-size: 0.82em;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .c-muted { color: #9aa3b2; }
+    .c-req { color: #5aa9f5; }
+    .c-ok { color: #34c99f; }
+    .c-err { color: #f07178; }
+    .card .panel p.note { margin: 10px 0 0; font-size: 0.85em; }
+
     .badge {
       font-size: 0.68em;
       font-weight: 600;
@@ -454,6 +496,7 @@
       .hero { padding: 40px 0 24px; }
       h1 { font-size: 2em; }
       .grid.cols-2 { grid-template-columns: 1fr; }
+      .console-form { grid-template-columns: 1fr; }
       .card { padding: 22px 20px; }
       .cta { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
       .file .arrow { display: none; }
@@ -561,13 +604,49 @@
           </div>
 
           <div class="tabs" role="tablist" aria-label="How to connect">
-            <button type="button" role="tab" aria-selected="true" aria-controls="tab-claude" id="t-claude">Claude</button>
+            <button type="button" role="tab" aria-selected="true" aria-controls="tab-try" id="t-try">Try it live</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-claude" id="t-claude" tabindex="-1">Claude</button>
             <button type="button" role="tab" aria-selected="false" aria-controls="tab-code" id="t-code" tabindex="-1">Claude Code</button>
             <button type="button" role="tab" aria-selected="false" aria-controls="tab-other" id="t-other" tabindex="-1">Other clients</button>
             <button type="button" role="tab" aria-selected="false" aria-controls="tab-curl" id="t-curl" tabindex="-1">curl</button>
           </div>
 
-          <div class="panel" role="tabpanel" id="tab-claude" aria-labelledby="t-claude">
+          <div class="panel" role="tabpanel" id="tab-try" aria-labelledby="t-try">
+            <p>Call the server from your browser and see exactly what an AI agent gets back.</p>
+            <form class="console-form" id="mcp-form">
+              <label>
+                <span>Tool</span>
+                <select id="mcp-tool">
+                  <option value="get_cv">get_cv</option>
+                  <option value="get_projects">get_projects</option>
+                  <option value="check_fit">check_fit</option>
+                  <option value="tools/list">tools/list</option>
+                </select>
+              </label>
+              <label id="mcp-lang-field">
+                <span>Language</span>
+                <select id="mcp-lang">
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                </select>
+              </label>
+              <label class="full" id="mcp-jd-field" hidden>
+                <span>Job description</span>
+                <textarea id="mcp-jd" rows="4" placeholder="Paste the job description here"></textarea>
+              </label>
+              <div class="console-actions">
+                <button type="submit" class="btn primary" id="mcp-run">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  Run
+                </button>
+                <button type="button" class="btn" id="mcp-curl">Copy as curl</button>
+              </div>
+            </form>
+            <pre class="console-out" id="mcp-out" aria-live="polite"><span class="c-muted">Pick a tool and press Run.</span></pre>
+            <p class="note"><code>check_fit</code> returns my CV, projects and the format for the assessment. Your agent's model writes the verdict.</p>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-claude" aria-labelledby="t-claude" hidden>
             <ol class="steps">
               <li>In claude.ai or Claude Desktop, open Settings → Connectors.</li>
               <li>Click Add custom connector. Name it <code>Pablo Sagarna CV</code> and paste the URL above.</li>
@@ -721,6 +800,81 @@
         if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus(); }
       });
     });
+
+    (function () {
+      var ENDPOINT = 'https://mcp.psagarna.workers.dev/mcp';
+      var $ = function (id) { return document.getElementById(id); };
+      var tool = $('mcp-tool'), lang = $('mcp-lang'), jd = $('mcp-jd'), out = $('mcp-out'), run = $('mcp-run');
+      var nextId = 1;
+
+      function sync() {
+        $('mcp-jd-field').hidden = tool.value !== 'check_fit';
+        $('mcp-lang-field').hidden = tool.value === 'get_projects' || tool.value === 'tools/list';
+      }
+      tool.addEventListener('change', sync);
+      sync();
+
+      function request() {
+        var msg = { jsonrpc: '2.0', id: nextId++ };
+        if (tool.value === 'tools/list') {
+          msg.method = 'tools/list';
+        } else {
+          var args = {};
+          if (tool.value !== 'get_projects') args.lang = lang.value;
+          if (tool.value === 'check_fit') args.job_description = jd.value.trim();
+          msg.method = 'tools/call';
+          msg.params = { name: tool.value, arguments: args };
+        }
+        return msg;
+      }
+
+      function line(cls, text) {
+        var s = document.createElement('span');
+        s.className = cls;
+        s.textContent = text;
+        return s;
+      }
+
+      $('mcp-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (tool.value === 'check_fit' && !jd.value.trim()) { jd.focus(); return; }
+        var msg = request();
+        out.replaceChildren(line('c-req', '→ ' + JSON.stringify(msg) + '\n\n'), line('c-muted', 'Calling…'));
+        run.disabled = true;
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json, text/event-stream' },
+          body: JSON.stringify(msg)
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            out.lastChild.remove();
+            if (res.error) {
+              out.append(line('c-err', '✗ ' + res.error.message));
+            } else if (res.result.tools) {
+              out.append(line('c-ok', '← ' + res.result.tools.length + ' tools\n\n'),
+                document.createTextNode(JSON.stringify(res.result.tools, null, 2)));
+            } else {
+              var text = res.result.content.map(function (c) { return c.text; }).join('\n');
+              out.append(line(res.result.isError ? 'c-err' : 'c-ok', (res.result.isError ? '✗ ' : '← ') + tool.value + '\n\n'),
+                document.createTextNode(text));
+            }
+          })
+          .catch(function (err) {
+            out.lastChild.remove();
+            out.append(line('c-err', '✗ Could not reach the MCP server: ' + err.message));
+          })
+          .finally(function () { run.disabled = false; out.scrollTop = 0; });
+      });
+
+      $('mcp-curl').addEventListener('click', function () {
+        var b = this, body = JSON.stringify(request()).replace(/'/g, "'\\''");
+        var cmd = 'curl -s ' + ENDPOINT + ' \\\n  -H "Content-Type: application/json" \\\n  -d \'' + body + '\'';
+        navigator.clipboard.writeText(cmd).then(function () {
+          b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy as curl'; }, 1600);
+        });
+      });
+    })();
 
     document.querySelectorAll('.copy').forEach(function (b) {
       b.addEventListener('click', function () {
