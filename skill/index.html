@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Skill — Pablo Sagarna</title>
+<meta name="description" content="An Agent Skill that lets AI agents answer questions about Pablo Sagarna's professional profile and assess his fit for a role.">
+<link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/SKILL.md">
+<style>
+  :root {
+    --ink: #1F3864; --text: #1d2330; --muted: #5b6472; --rule: #d7dce4;
+    --bg: #ffffff; --code-bg: #f3f5f9; --link: #1f4fa8;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #a9c1ee; --text: #e4e8ef; --muted: #9aa3b2; --rule: #2c3442;
+      --bg: #12161d; --code-bg: #1b212b; --link: #8fb4ff;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 72px; }
+  a { color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .back { font-size: 15px; color: var(--muted); }
+  h1 { color: var(--ink); font-size: 2.1rem; line-height: 1.2; margin: 28px 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 36px; }
+  h2 { color: var(--ink); font-size: 1.15rem; margin: 40px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  .ask {
+    margin: 0 0 8px; padding: 22px 24px; background: var(--code-bg);
+    border-left: 4px solid var(--ink); font-size: 1.2rem; line-height: 1.45; color: var(--text);
+  }
+  .ask-note { color: var(--muted); font-size: 15px; margin: 0; }
+  code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 14px; }
+  pre { background: var(--code-bg); padding: 14px 16px; overflow-x: auto; margin: 10px 0 0; }
+  ol { padding-left: 1.3em; } li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td:first-child { width: 42%; padding-right: 12px; }
+  .download {
+    display: inline-block; margin-top: 8px; padding: 10px 18px; background: var(--ink); color: var(--bg);
+    text-decoration: none; font-weight: 600; border-radius: 4px;
+  }
+  footer { margin-top: 56px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="https://psagarna.github.io/">Pablo Sagarna</a>
+
+  <h1>My CV, as an agent skill</h1>
+  <p class="lede">Give this skill to your AI agent and it can answer questions about my experience, check my fit for a role and draft a candidate summary — in English or Spanish, using only what is in my CV.</p>
+
+  <p class="ask">“Does Pablo Sagarna fit this role?” — and paste the job description.</p>
+  <p class="ask-note">The agent replies with a verdict, the matching experience, any gaps and questions worth asking me.</p>
+
+  <h2>Use it in Claude</h2>
+  <ol>
+    <li>Download the skill.</li>
+    <li>Add it in Claude from the Skills section of your settings.</li>
+    <li>Ask about me in any conversation.</li>
+  </ol>
+  <a class="download" href="pablo-sagarna-profile.zip" download>Download skill (.zip)</a>
+
+  <h2>Use it with any other agent</h2>
+  <p>Point your agent or LLM at the skill file. It links to the rest.</p>
+  <pre>https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/SKILL.md</pre>
+
+  <h2>What’s inside</h2>
+  <table>
+    <tr><td><a href="https://github.com/psagarna/pablo-sagarna-profile/blob/main/SKILL.md">SKILL.md</a></td><td>Instructions and ground rules for the agent</td></tr>
+    <tr><td><a href="https://github.com/psagarna/pablo-sagarna-profile/blob/main/references/cv-en.md">CV in English</a> and <a href="https://github.com/psagarna/pablo-sagarna-profile/blob/main/references/cv-es.md">Spanish</a></td><td>Full experience, education, certifications and stack</td></tr>
+    <tr><td><a href="https://github.com/psagarna/pablo-sagarna-profile/blob/main/references/projects.md">Projects</a></td><td>OTS, PortableModel and PortableGW</td></tr>
+    <tr><td><a href="https://github.com/psagarna/pablo-sagarna-profile/blob/main/assets/resume.json">resume.json</a></td><td>Structured CV in the JSON Resume schema</td></tr>
+  </table>
+
+  <footer>
+    Prefer to talk directly? Write to <a href="mailto:psagarna+job@gmail.com">psagarna+job@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/psagarna/">LinkedIn</a>.
+  </footer>
+</main>
+</body>
+</html>

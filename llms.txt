@@ -1,0 +1,13 @@
+# Pablo D. Sagarna Proietti
+
+> CTO and Director of Enterprise Architecture & AI (WSO2, ex-Accenture, MuleSoft/Salesforce, IBM). 20+ years in enterprise architecture, integration and digital transformation across Europe and LATAM; recent focus on generative and agentic AI, MCP governance and LLM gateways. Contact: psagarna+job@gmail.com
+
+## Agent skill
+- [SKILL.md](https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/SKILL.md): instructions for agents answering questions about Pablo or assessing his fit for a role
+- [CV (English, UK)](https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/references/cv-en.md)
+- [CV (Spanish)](https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/references/cv-es.md)
+- [Projects](https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/references/projects.md): OTS, PortableModel, PortableGW
+- [resume.json](https://raw.githubusercontent.com/psagarna/pablo-sagarna-profile/main/assets/resume.json): JSON Resume schema
+
+## Publications
+- [OpenTool Specification (OTS)](https://psagarna.github.io/OTS): contract-first governance layer for tools, resources and prompts of AI agents
