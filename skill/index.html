@@ -597,7 +597,7 @@
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V2M15 7V2M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></svg></span>
             MCP server <span class="badge">Fastest, nothing to install</span>
           </h3>
-          <p>A public remote MCP server (Streamable HTTP, no login). Tools: <code>get_cv</code>, <code>get_projects</code> and <code>check_fit</code>; resources: both CVs, projects and <code>resume.json</code>.</p>
+          <p>A public remote MCP server (Streamable HTTP, no login). Tools: <code>get_cv</code>, <code>get_projects</code> and <code>check_fit</code>; resources: both CVs, projects and <code>resume.json</code>. Listed in the <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.psagarna/cv" target="_blank" rel="noopener">official MCP Registry</a> as <code>io.github.psagarna/cv</code>.</p>
           <div class="url">
             <code>https://mcp.psagarna.workers.dev/mcp</code>
             <button type="button" class="copy">Copy</button>
@@ -691,6 +691,8 @@
             <div class="code"><pre><code>curl -s https://mcp.psagarna.workers.dev/mcp \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"check_fit","arguments":{"job_description":"Head of AI Architecture: 10+ years in enterprise architecture, LLMs and cloud","lang":"en"}}}'</code></pre><button type="button" class="copy">Copy</button></div>
+            <p>Find it in the official MCP Registry:</p>
+            <div class="code"><pre><code>curl "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.psagarna/cv"</code></pre><button type="button" class="copy">Copy</button></div>
           </div>
         </div>
         <div class="card">

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.psagarna/cv",
+  "title": "Pablo Sagarna — CV",
+  "description": "Pablo Sagarna's CV for AI agents: ask about his experience or check his fit for a role.",
+  "version": "1.0.0",
+  "websiteUrl": "https://psagarna.github.io/skill/",
+  "repository": {
+    "url": "https://github.com/psagarna/psagarna.github.io",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "icons": [
+    {
+      "src": "https://psagarna.github.io/foto.jpeg",
+      "mimeType": "image/jpeg",
+      "sizes": ["640x640"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.psagarna.workers.dev/mcp"
+    }
+  ]
+}
