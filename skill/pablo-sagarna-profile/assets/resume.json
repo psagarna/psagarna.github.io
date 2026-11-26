@@ -1,0 +1,250 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Pablo D. Sagarna Proietti",
+    "label": "CTO | Director of Enterprise Architecture & AI | Generative and Agentic AI",
+    "email": "psagarna+job@gmail.com",
+    "url": "https://psagarna.github.io/OTS/",
+    "summary": "Technology and Architecture Director with over 20 years in enterprise architecture, integration and digital transformation across Europe and LATAM, focusing in recent years on industrialising generative and agentic AI. Former CTO accountable for strategy, P&L, budget and multidisciplinary teams.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "psagarna",
+        "url": "https://www.linkedin.com/in/psagarna/"
+      },
+      {
+        "network": "GitHub",
+        "username": "psagarna",
+        "url": "https://github.com/psagarna"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "WSO2",
+      "position": "Director of Architecture",
+      "startDate": "2024-05",
+      "location": "Europe",
+      "summary": "Architecture strategy for customers and partners: API-first, cloud-native integration and AI in production.",
+      "highlights": [
+        "Advising CIOs/CTOs on taking generative and agentic AI architectures into production (RAG, LLM integration, agent-as-application)",
+        "Technology roadmaps and reference architectures for enterprise AI: governance, Zero Trust, OAuth 2.0 M2M, observability, MLOps/LLMOps",
+        "Technical evangelism at meetups, workshops, webinars and international events"
+      ]
+    },
+    {
+      "name": "Accenture",
+      "position": "Sr. Technical Architect Manager",
+      "startDate": "2021-09",
+      "endDate": "2024-04",
+      "location": "Europe",
+      "summary": "Technical and delivery lead for several teams of architects and developers (integration, automation and AI).",
+      "highlights": [
+        "Reference architectures (Cloud, APIs, AI and Data)",
+        "End-to-end leadership of technology programmes",
+        "P&L, budget, risk and executive client relationships",
+        "Pre-sales and business development"
+      ]
+    },
+    {
+      "name": "MuleSoft (Salesforce)",
+      "position": "Regional Sr. Architect Manager",
+      "startDate": "2019-01",
+      "endDate": "2021-09",
+      "location": "LATAM",
+      "summary": "Regional technical lead: architecture standards, modern integration practices and technology vision.",
+      "highlights": [
+        "Technical expansion strategies for integration platform adoption",
+        "Senior solution architect on strategic opportunities",
+        "Scalable multi-cloud architectures"
+      ]
+    },
+    {
+      "name": "Grupo RV",
+      "position": "CTO",
+      "startDate": "2016-01",
+      "endDate": "2019-01",
+      "location": "LATAM",
+      "summary": "Owned technology strategy and digital transformation; led a team of PMs, architects, analysts and developers.",
+      "highlights": [
+        "Digitalised and automated 90% of processes",
+        "Improved operational efficiency by 200% and significantly reduced costs",
+        "Increased customer satisfaction by 150%",
+        "Cloud ERP on AWS with process redesign and data governance",
+        "Digital and online presence strategy (200% growth)"
+      ]
+    },
+    {
+      "name": "IBM",
+      "position": "Delivery Lead / Sr. Architect Manager",
+      "startDate": "2014-09",
+      "endDate": "2016-05",
+      "location": "LATAM and Europe",
+      "summary": "BPM and SOA architecture lead for automation and integration initiatives.",
+      "highlights": [
+        "Automation, integration and information governance solutions",
+        "Complex projects in banking and telecommunications",
+        "P&L and executive stakeholder management"
+      ]
+    },
+    {
+      "name": "Software AG and Capgemini",
+      "position": "Regional Enterprise Architecture Roles",
+      "startDate": "2001",
+      "endDate": "2014",
+      "location": "LATAM and Europe",
+      "summary": "Large-scale BPM/SOA solutions, architecture guidelines and international technical teams.",
+      "highlights": [
+        "Enterprise clients: HMRC (UK), BBVA, Santander, Capsa Capex, Fuegotech"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "IAE Business School",
+      "area": "Business Administration",
+      "studyType": "Executive MBA",
+      "startDate": "2013",
+      "endDate": "2014"
+    },
+    {
+      "institution": "Universidad Austral",
+      "area": "Computer Engineering (officially recognised in Spain)",
+      "studyType": "5-year engineering degree",
+      "startDate": "1998",
+      "endDate": "2003"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "C1 (Cambridge certificate)"
+    },
+    {
+      "language": "Portuguese",
+      "fluency": "Intermediate"
+    }
+  ],
+  "skills": [
+    {
+      "name": "AI",
+      "keywords": [
+        "LLMs",
+        "MCP",
+        "RAG",
+        "multi-agent systems",
+        "LangChain",
+        "llama.cpp",
+        "vLLM",
+        "Ollama",
+        "MLX",
+        "Pinecone",
+        "TensorFlow",
+        "PyTorch",
+        "MLOps/LLMOps"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "keywords": [
+        "TOGAF",
+        "ArchiMate",
+        "API-first",
+        "microservices",
+        "EDA",
+        "BPM/SOA"
+      ]
+    },
+    {
+      "name": "Integration and APIs",
+      "keywords": [
+        "WSO2",
+        "MuleSoft",
+        "Apigee",
+        "Boomi",
+        "Kafka",
+        "Oracle Service Bus",
+        "IBM Integration Bus"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "Kubernetes",
+        "OpenShift",
+        "Docker",
+        "serverless"
+      ]
+    },
+    {
+      "name": "Data",
+      "keywords": [
+        "Snowflake",
+        "Databricks",
+        "PostgreSQL",
+        "MySQL",
+        "Oracle",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "DevOps and observability",
+      "keywords": [
+        "CI/CD",
+        "GitLab",
+        "GitHub",
+        "Jenkins",
+        "Azure DevOps",
+        "OpenTelemetry",
+        "Grafana"
+      ]
+    },
+    {
+      "name": "Development",
+      "keywords": [
+        "Python",
+        "Go",
+        "Java",
+        "C/C++",
+        "JavaScript",
+        "Shell",
+        "Spring",
+        "FastAPI",
+        "Flask",
+        "Ballerina"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "OpenTool Specification (OTS)",
+      "description": "Open-source (Apache 2.0) specification and Go reference gateway to govern MCP tools used by AI agents.",
+      "url": "https://psagarna.github.io/OTS/",
+      "roles": [
+        "Creator",
+        "Maintainer"
+      ]
+    },
+    {
+      "name": "PortableModel",
+      "description": "Private project: LLM inference gateway in Go with OpenAI-compatible API, multi-engine model management, server-side MCP execution and agent observability.",
+      "roles": [
+        "Creator"
+      ]
+    },
+    {
+      "name": "PortableGW",
+      "description": "Private project: multi-tenant API and AI Gateway in Go with OpenAPI, JWT/OIDC, clustering, token-reduction guardrails and OpenAPI/SQL-to-MCP conversion.",
+      "roles": [
+        "Creator"
+      ]
+    }
+  ]
+}
